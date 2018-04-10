@@ -25,7 +25,7 @@ Learn more? Follow my `WeChat` public account `mellong`:
 
 MIT License
 
-Copyright (c) 2016 Mellong Lau
+Copyright (c) 2018 Mellong Lau
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
