@@ -1,7 +1,3 @@
-Donate
-===========
-
-* [Donate via paypal](https://paypal.me/mellonglau)
 
 # Particle Animation
 A iOS particle animation demo with Swift.
