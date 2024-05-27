@@ -12,10 +12,6 @@ A iOS particle animation demo with Swift.
 ![Spider](./screenshot-spider.gif)
 ![Particle System](./screenshot-particle-system.gif)
 
-## More
-Learn more? Follow my `WeChat` public account `mellong`:
-
-![WeChat QRcode](http://blog.devlong.com/blogImages/qrcode_for_mellong.jpg)
 
 ## License
 
