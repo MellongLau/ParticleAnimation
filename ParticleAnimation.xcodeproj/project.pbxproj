@@ -24,6 +24,9 @@
 		247E9EE320495E5B007F2255 /* VerletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247E9EE220495E5B007F2255 /* VerletView.swift */; };
 		247E9EE5204A3D51007F2255 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247E9EE4204A3D51007F2255 /* Tree.swift */; };
 		247E9EE7204A5888007F2255 /* Spider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247E9EE6204A5888007F2255 /* Spider.swift */; };
+		5E6721522CC0E12E000E417D /* SystemDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6721512CC0E12E000E417D /* SystemDemoView.swift */; };
+		5E6721542CC0E14E000E417D /* Particle2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6721532CC0E14E000E417D /* Particle2.swift */; };
+		5E6721562CC0E169000E417D /* Repeller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6721552CC0E169000E417D /* Repeller.swift */; };
 		FD59FADB2067972100880D89 /* ParticleSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD59FADA2067972100880D89 /* ParticleSystem.swift */; };
 		FD89DABD207CFB1100EF5D1C /* DemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD89DABC207CFB1100EF5D1C /* DemoTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +51,9 @@
 		247E9EE220495E5B007F2255 /* VerletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerletView.swift; sourceTree = "<group>"; };
 		247E9EE4204A3D51007F2255 /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		247E9EE6204A5888007F2255 /* Spider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spider.swift; sourceTree = "<group>"; };
+		5E6721512CC0E12E000E417D /* SystemDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemDemoView.swift; sourceTree = "<group>"; };
+		5E6721532CC0E14E000E417D /* Particle2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Particle2.swift; sourceTree = "<group>"; };
+		5E6721552CC0E169000E417D /* Repeller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repeller.swift; sourceTree = "<group>"; };
 		FD59FADA2067972100880D89 /* ParticleSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleSystem.swift; sourceTree = "<group>"; };
 		FD89DABC207CFB1100EF5D1C /* DemoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,7 +102,7 @@
 				247E9ED820495DB1007F2255 /* Entity.swift */,
 				247E9ED620495D85007F2255 /* Constraint.swift */,
 				247E9ED220495D11007F2255 /* Extension.swift */,
-				FD59FADA2067972100880D89 /* ParticleSystem.swift */,
+				5E6721502CC0E10D000E417D /* ParticleSystem */,
 				247E9ED420495D41007F2255 /* Vec2.swift */,
 				247E9EC420495CDD007F2255 /* Main.storyboard */,
 				247E9EC720495CDD007F2255 /* Assets.xcassets */,
@@ -104,6 +110,17 @@
 				247E9ECC20495CDD007F2255 /* Info.plist */,
 			);
 			path = ParticleAnimation;
+			sourceTree = "<group>";
+		};
+		5E6721502CC0E10D000E417D /* ParticleSystem */ = {
+			isa = PBXGroup;
+			children = (
+				5E6721512CC0E12E000E417D /* SystemDemoView.swift */,
+				FD59FADA2067972100880D89 /* ParticleSystem.swift */,
+				5E6721532CC0E14E000E417D /* Particle2.swift */,
+				5E6721552CC0E169000E417D /* Repeller.swift */,
+			);
+			path = ParticleSystem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,8 +206,11 @@
 				FD59FADB2067972100880D89 /* ParticleSystem.swift in Sources */,
 				247E9EC320495CDD007F2255 /* ViewController.swift in Sources */,
 				247E9ED920495DB1007F2255 /* Entity.swift in Sources */,
+				5E6721522CC0E12E000E417D /* SystemDemoView.swift in Sources */,
 				247E9EDF20495E2B007F2255 /* AngleConstraint.swift in Sources */,
+				5E6721542CC0E14E000E417D /* Particle2.swift in Sources */,
 				247E9EE7204A5888007F2255 /* Spider.swift in Sources */,
+				5E6721562CC0E169000E417D /* Repeller.swift in Sources */,
 				247E9ED520495D41007F2255 /* Vec2.swift in Sources */,
 				247E9EE5204A3D51007F2255 /* Tree.swift in Sources */,
 				247E9ED720495D85007F2255 /* Constraint.swift in Sources */,

@@ -36,7 +36,6 @@ func treeDemo(_ sim: VerletView) {
         for i in 0..<composite.particles.count {
             let particle = composite.particles[i]
             if (particle.leaf) {
-//                print(particle.pos)
                 ctx.addArc(center: particle.pos.toCGPoint(), radius: 25, startAngle: 0, endAngle: CGFloat(2 * Double.pi), clockwise: true)
                 ctx.fillPath()
             }

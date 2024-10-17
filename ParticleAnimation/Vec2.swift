@@ -21,7 +21,7 @@ public struct Vec2 {
     public func add(v: Vec2) -> Vec2 {
         return Vec2(x: x + v.x, y: y + v.y)
     }
-
+    
     public func sub(v: Vec2) -> Vec2 {
         return Vec2(x: x - v.x, y: y - v.y)
     }
@@ -105,6 +105,18 @@ public struct Vec2 {
         return Vec2(x: x / m, y: y / m);
     }
     
+    mutating func normalize() {
+        let m = mag()
+        if m != 0 {
+            mult(1 / m)
+        }
+    }
+    
+    mutating func mult(_ n: Float) {
+        x *= n
+        y *= n
+    }
+    
     public func dot(v: Vec2) -> Float {
         return x * v.x + y * v.y
     }
@@ -121,6 +133,10 @@ public struct Vec2 {
         let x1 = x - origin.x;
         let y1 = y - origin.y;
         return Vec2(x: x1 * cos(theta) - y1 * sin(theta) + origin.x, y: x1 * sin(theta) + y1 * cos(theta) + origin.y)
+    }
+    
+    func mag() -> Float {
+        return sqrt(x * x + y * y)
     }
     
     public func toString() -> String {
