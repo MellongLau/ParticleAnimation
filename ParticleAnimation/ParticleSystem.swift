@@ -110,9 +110,9 @@ class Particle2{
     }
     
     func update() {
-        velocity.mutableAdd(v: acceleration)
-        position.mutableAdd(v: velocity)
-        acceleration.mutableMul(v: Vec2(x: 0, y: 0))
+        let _ = velocity.mutableAdd(v: acceleration)
+        let _ = position.mutableAdd(v: velocity)
+        let _ = acceleration.mutableMul(v: Vec2(x: 0, y: 0))
         timeToLive -= 2
     }
     
@@ -135,7 +135,7 @@ class Particle2{
     
     func applyForce(force: Vec2) {
         _ = force.div(v: Vec2(x: mass, y: mass))
-        acceleration.mutableAdd(v: force)
+        _ = acceleration.mutableAdd(v: force)
     }
     
 }
@@ -162,7 +162,7 @@ class Repeller {
         
         let force = -1.0 * power.float / (distance * distance)
         
-        normal.mutableMul(v: Vec2(x: force, y: force))
+        _ = normal.mutableMul(v: Vec2(x: force, y: force))
         return normal
         
     }

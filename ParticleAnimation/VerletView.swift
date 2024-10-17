@@ -101,7 +101,7 @@ class VerletView: UIView {
         
         for c in 0..<composites.count {
             for i in 0..<composites[c].particles.count {
-                var particles = composites[c].particles
+                let particles = composites[c].particles
 
                 // calculate velocity
                 var velocity = particles[i].pos.sub(v: particles[i].lastPos).scale(coef: friction)
@@ -145,7 +145,7 @@ class VerletView: UIView {
         //??think about array replace item
         // bounds checking
         for c in 0..<composites.count {
-            var particles = composites[c].particles
+            let particles = composites[c].particles
             for i in 0..<particles.count {
                 composites[c].particles[i] = limitInBounds(particle: particles[i])
             }
@@ -167,7 +167,7 @@ class VerletView: UIView {
             if let drawConstraints = composites[c].drawConstraints {
                 drawConstraints(ctx, composites[c])
             } else {
-                var constraints = composites[c].constraints
+                let constraints = composites[c].constraints
                 for i in 0..<constraints.count {
                     constraints[i].draw(ctx: ctx)
                 }
@@ -177,7 +177,7 @@ class VerletView: UIView {
             if let drawParticles = composites[c].drawParticles {
                 drawParticles(ctx, composites[c])
             } else {
-                var particles = composites[c].particles
+                let particles = composites[c].particles
                 for i in 0..<particles.count {
                     particles[i].draw(ctx: ctx)
                 }
@@ -203,7 +203,7 @@ class VerletView: UIView {
         
         // find nearest point
         for c in 0..<composites.count {
-            var particles = composites[c].particles
+            let particles = composites[c].particles
             for i in 0..<particles.count {
                 let d2 = particles[i].pos.dist2(v: mouse)
                 if d2 <= selectionRadius * selectionRadius && (entity == nil || d2 < d2Nearest) {

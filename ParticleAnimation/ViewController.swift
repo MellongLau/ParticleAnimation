@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         verletView.backgroundColor = UIColor.white
         view.addSubview(verletView)
         view.backgroundColor = UIColor.white
-        displayLink?.add(to: RunLoop.current, forMode: RunLoopMode.defaultRunLoopMode)
+        displayLink?.add(to: RunLoop.current, forMode: RunLoop.Mode.default)
 
         guard let title = title else {
             return
