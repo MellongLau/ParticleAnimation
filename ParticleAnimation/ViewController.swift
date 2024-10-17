@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         verletView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
         verletView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
         
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.black
         displayLink?.add(to: RunLoop.current, forMode: RunLoop.Mode.default)
 
         guard let title = title else {
