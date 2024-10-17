@@ -12,10 +12,11 @@ class ViewController: UIViewController {
     var verletView: VerletView?
     var displayLink: CADisplayLink?
     var systemDemoView: SystemDemoView?
-
+    var legIndex = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         displayLink = CADisplayLink(target: self, selector: #selector(drawFrame))
    
         if #available(iOS 10.0, *) {
@@ -29,6 +30,13 @@ class ViewController: UIViewController {
         }
         verletView.backgroundColor = UIColor.white
         view.addSubview(verletView)
+        //verletView should add constraint for safe area layout guide
+        verletView.translatesAutoresizingMaskIntoConstraints = false
+        verletView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        verletView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        verletView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        verletView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        
         view.backgroundColor = UIColor.white
         displayLink?.add(to: RunLoop.current, forMode: RunLoop.Mode.default)
 
@@ -49,13 +57,18 @@ class ViewController: UIViewController {
             view.addSubview(systemDemoView!)
         }
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        displayLink?.invalidate()
+        displayLink = nil
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
-    var legIndex = 0
+    
     @objc func drawFrame() {
         
         if title == "Particle System" {
@@ -70,8 +83,5 @@ class ViewController: UIViewController {
             verletView?.gotoFrame(step: 16)
             verletView?.setNeedsDisplay()
         }
-
-        
-//
     }
 }
